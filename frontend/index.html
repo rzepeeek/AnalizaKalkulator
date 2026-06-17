@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator do Analizy Matematycznej</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script>
+</head>
+<body>
+
+<h1>Analiza Matematyczna</h1>
+
+<div class="container">
+
+    <div class="left-panel">
+        <input id="expression" placeholder="np. x^2">
+        <br><br>
+        <input id="expression2" placeholder="g(x)">
+
+        <select id="type">
+            <option value="indefinite">Całka nieoznaczona</option>
+            <option value="definite">Całka oznaczona</option>
+            <option value="derivative">Pochodna</option>
+            <option value="area_between">Pole między krzywymi</option>
+            <option value="volume">Objętość bryły</option>
+        </select>
+
+        <br><br>
+        <input id="a" type="number" step="any" placeholder="Dolna granica">
+        <input id="b" type="number" step="any" placeholder="Górna granica">
+        <br><br>
+
+        <button onclick="calculate()">Oblicz</button>
+        <div id="result"></div>
+    </div>
+
+    <div class="right-panel">
+        <h3>Gotowe funkcje</h3>
+        <button onclick="setFunction('x')">x</button>
+        <button onclick="addToFunction('e')">e</button>
+        <button onclick="setFunction('x^2')">x²</button>
+        <button onclick="setFunction('x^3')">x³</button>
+        <button onclick="setFunction('sin(x)')">sin(x)</button>
+        <button onclick="setFunction('cos(x)')">cos(x)</button>
+
+        <hr>
+
+        <h3>Budowanie funkcji</h3>
+        <button onclick="addToFunction('x')">x</button>
+        <button onclick="addToFunction('+')">+</button>
+        <button onclick="addToFunction('-')">-</button>
+        <button onclick="addToFunction('*')">*</button>
+        <button onclick="addToFunction('/')">/</button>
+        <button onclick="addToFunction('^')">^</button>
+        <button onclick="addToFunction('sin(')">sin</button>
+        <button onclick="addToFunction('cos(')">cos</button>
+        <button onclick="setFunction('e^x')">e^x</button>
+        <button onclick="setFunction('ln(x)')">ln(x)</button>
+        <button onclick="addToFunction(')')">)</button>
+
+        <hr>
+
+        <h3>Historia</h3>
+        <div id="history"></div>
+        <br>
+        <button onclick="clearHistory()">Wyczyść historię</button>
+        <br><br>
+    </div>
+
+</div>
+
+<br>
+
+<div id="chart-container">
+    <canvas id="chart"></canvas>
+</div>
+
+<br>
+<button onclick="resetZoom()">Reset widoku</button>
+
+<script src="script.js"></script>
+</body>
+</html>
