@@ -1,6 +1,6 @@
 CMakeFiles/server.dir/main.cpp.obj: \
- C:\Users\Dejvi\Desktop\all\ANS\analiza\AnalizaCalki\backend\main.cpp \
- C:/Users/Dejvi/Desktop/all/ANS/analiza/AnalizaCalki/backend/include/httplib.h \
+ C:\Users\Dejvi\Desktop\all\ANS\analiza\AnalizaCalki\AnalizaKalkulator\backend\main.cpp \
+ C:/Users/Dejvi/Desktop/all/ANS/analiza/AnalizaCalki/AnalizaKalkulator/backend/include/httplib.h \
  C:/msys2/ucrt64/include/io.h C:/msys2/ucrt64/include/crtdefs.h \
  C:/msys2/ucrt64/include/corecrt.h C:/msys2/ucrt64/include/_mingw.h \
  C:/msys2/ucrt64/include/_mingw_mac.h \
